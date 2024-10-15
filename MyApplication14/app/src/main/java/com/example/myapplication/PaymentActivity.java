@@ -45,7 +45,7 @@ private ActivityPaymentBinding binding;
             @Override
             public void onClick(View view) {
                 ProgressDialog progressDialog = new ProgressDialog(PaymentActivity.this);
-                progressDialog.setMessage("Thanks For Choosing Premium...and we will contact with  for confirm.");
+                progressDialog.setMessage("Thanks For Choosing Premium...and we will contact with you for confirm.");
                 progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                 progressDialog.setTitle("Loading...");
                 progressDialog.setCancelable(false);
