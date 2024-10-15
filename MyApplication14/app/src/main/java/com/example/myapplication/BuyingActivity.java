@@ -47,7 +47,6 @@ public class BuyingActivity extends AppCompatActivity {
                     buyCarModels.add(new BuyCarModel("Mercedes-AMG GTR", "180000$ - 200000$", R.drawable.c7, "7.9", R.drawable.whiteheart_));
                     buyCarModels.add(new BuyCarModel("Mercedes-IStock", "300000$ - 450000$", R.drawable.m7, "7.9", R.drawable.whiteheart_));
                     buyCarModels.add(new BuyCarModel("Dodge Hellcat", "300000$ - 320000$", R.drawable.hellcat, "8.5", R.drawable.whiteheart_));
-                    buyCarModels.add(new BuyCarModel("Black Demon Lamborghini", "250000$ - 270000$", R.drawable.c9, "8.5", R.drawable.whiteheart_));
                     // استخدام السياق الصحيح هنا
                     adapter = new Adapter3(buyCarModels, BuyingActivity.this);
                     layoutManager = new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL, false);
