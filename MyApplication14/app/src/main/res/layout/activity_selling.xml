@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutAnimation="@anim/layout_animation"
+    tools:context=".SellingActivity">
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:indeterminate="true"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Location"
+        android:textSize="16sp"
+        android:drawableStart="@drawable/pin"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp" />
+    <ImageView
+        android:layout_width="181dp"
+        android:layout_height="70dp"
+        android:layout_toEndOf="@+id/tvFeature1"
+        android:layout_below="@id/tvSubtitle"
+        android:layout_marginStart="106dp"
+        android:src="@drawable/kindpng"/>
+
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/face"
+        android:scaleType="centerCrop"
+        android:padding="4dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="15dp" />
+
+    <!-- Buy and Sell Buttons -->
+    <LinearLayout
+        android:id="@+id/llBuySell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="35dp"
+            android:layout_height="23dp"
+            android:layout_toEndOf="@id/loc"
+            android:layout_marginStart="20dp"
+            android:backgroundTint="@color/babyred"
+            android:layout_marginTop="15dp"
+            android:id="@+id/sellingbuying"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/sell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sell"
+                    android:textSize="14dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true">
+
+                </TextView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card4"
+            android:layout_width="35dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/grey">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:layout_centerInParent="true"
+                    android:text="Buy"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <!-- Title and Description -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Car Selling Made"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/llBuySell"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Easy and Simple"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginStart="16dp" />
+
+    <!-- Features List -->
+    <TextView
+        android:id="@+id/tvFeature1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="• Best Price"
+        android:textSize="16sp"
+        android:layout_below="@id/tvSubtitle"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvFeature2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="• Instant Payment"
+        android:textSize="16sp"
+        android:layout_below="@id/tvFeature1"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvFeature3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="• Free RC Transfer"
+        android:textSize="16sp"
+        android:layout_below="@id/tvFeature2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp" />
+
+    <!-- Car Registration Input -->
+    <EditText
+        android:id="@+id/etCarRegistration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your Car Registration"
+        android:inputType="text"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:layout_below="@id/tvFeature3"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Sell My Car Button -->
+    <Button
+        android:id="@+id/btnSellMyCar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etCarRegistration"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/babyred"
+        android:drawablePadding="8dp"
+        android:text="Sell my car"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp" />
+
+    <!-- Just Check the Price -->
+    <TextView
+        android:id="@+id/tvCheckPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Just Check the price"
+        android:textColor="@color/blue"
+        android:layout_below="@id/btnSellMyCar"
+        android:layout_alignEnd="@id/btnSellMyCar"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvStartwithCarBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start with Car Brand"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_below="@id/tvCheckPrice"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+    <!-- Car Brands -->
+    <LinearLayout
+        android:id="@+id/llCarBrands"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/tvStartwithCarBrand"
+        android:layout_marginTop="16dp">
+
+        <ImageButton
+            android:id="@+id/btnAudi"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/vogo"
+            android:background="@null"
+            android:layout_marginEnd="8dp" />
+
+        <ImageButton
+            android:id="@+id/btnSkoda"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/skoda"
+            android:background="@null"
+            android:layout_marginEnd="8dp" />
+
+        <ImageButton
+            android:id="@+id/nissanbtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/nissan"
+            android:background="@null"
+            android:layout_marginEnd="8dp" />
+
+        <ImageButton
+            android:id="@+id/btnmercedes"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/mercedes"
+            android:background="@null"
+            android:layout_marginEnd="8dp" />
+
+        <ImageButton
+            android:id="@+id/renowBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/sab3a"
+            android:background="@null" />
+    </LinearLayout>
+
+    <!-- Top Listed Cars -->
+    <TextView
+        android:id="@+id/tvTopListedCars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Top Listed Cars"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_below="@id/llCarBrands"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/tvTopListedCars"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp" />
+
+
+</RelativeLayout>

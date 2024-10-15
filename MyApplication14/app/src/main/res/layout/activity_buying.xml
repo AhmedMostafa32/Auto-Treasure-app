@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".BuyingActivity">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pin"
+                android:layout_marginTop="22dp"
+                android:layout_marginStart="20dp"
+                android:id="@+id/loc"/>
+
+            <ImageView
+                android:layout_width="84dp"
+                android:layout_height="18dp"
+                android:src="@drawable/yourlocation"
+                android:layout_toEndOf="@id/loc"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="26dp"
+                android:id="@+id/your"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/love"
+                android:layout_toEndOf="@id/loc"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="25dp"
+                android:id="@+id/love"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="35dp"
+                android:layout_height="23dp"
+                android:src="@drawable/sellbuying"
+                android:layout_toEndOf="@id/loc"
+                android:layout_marginStart="159dp"
+                android:backgroundTint="@color/grey"
+                android:layout_marginTop="25dp"
+                android:id="@+id/sellingbuying"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Sell"
+                        android:id="@+id/sell"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        tools:ignore="TextSizeCheck">
+
+                    </TextView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card4"
+                android:layout_width="35dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="@color/babyred"
+                android:layout_marginStart="170dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/by"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Buy"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        tools:ignore="TextSizeCheck" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_marginBottom="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/face"
+                android:layout_toEndOf="@id/love"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/pic"/>
+
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/loc"
+                android:layout_marginTop="20dp"
+                android:id="@+id/search"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/edit_text_background"/>
+
+            <ImageView
+                android:id="@+id/filter_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/loc"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/filter" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:layoutAnimation="@anim/layout_animation"
+                android:id="@+id/recycler3"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/search"/>
+
+            <Spinner
+                android:id="@+id/car1"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/recycler3"
+                android:layout_marginStart="10dp"
+                android:entries="@array/preference"
+                android:spinnerMode="dropdown"
+                app:cardCornerRadius="10dp" />
+
+            <Spinner
+                android:id="@+id/card2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/recycler3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="60dp"
+                android:entries="@array/price"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:id="@+id/card3"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/recycler3"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:entries="@array/kms_options"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card3"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:text="Featured Cars"
+                android:id="@+id/featured"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="18dp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginHorizontal="10dp"
+                android:layoutAnimation="@anim/layout_animation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/featured"
+                android:id="@+id/recycler4"
+                android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,160 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:layoutAnimation="@anim/layout_animation"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SKIP"
+        android:textSize="12sp"
+        android:layout_margin="15dp"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cars2"
+        android:layout_below="@id/skip"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#FF6060"
+        android:layout_below="@id/car"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" with"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_toEndOf="@+id/log"
+        android:layout_below="@id/car"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/ss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="your mobile number"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_below="@id/log"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="for better Experience, Order tracking and Updates"
+        android:textSize="10sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_below="@id/ss"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:id="@+id/dd"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:layout_below="@id/dd"
+        android:layout_marginTop="5dp"
+        android:id="@+id/lin"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+20"
+            android:textColor="#999999"
+            android:textSize="16sp"
+            android:layout_marginEnd="8dp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/phone"
+            android:hint="Enter Number"
+            android:inputType="phone"
+            android:textColorHint="#FF5252"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"
+            android:padding="0dp" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FF5252"
+        android:padding="16dp"
+        android:text="Let's Start"
+        android:textAllCaps="true"
+        android:id="@+id/getotp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:cornerRadius="10dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or"
+        android:textColor="#999999"
+        android:layout_below="@id/getotp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/or"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/or"
+        android:src="@drawable/google"
+        android:id="@+id/google"
+        android:layout_marginStart="50dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/or"
+        android:id="@+id/apple"
+        android:src="@drawable/apple"
+        android:layout_marginStart="170dp"/>
+    <ImageView
+        android:id="@+id/facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/or"
+        android:src="@drawable/facebook"
+        android:layout_marginStart="280dp"/>
+</RelativeLayout>

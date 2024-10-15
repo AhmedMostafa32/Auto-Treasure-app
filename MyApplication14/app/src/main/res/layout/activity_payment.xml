@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".PaymentActivity">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:id="@+id/back"
+        android:layout_margin="18dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Premium Membership"
+        android:textStyle="bold"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="70dp"/>
+<ImageView
+    android:id="@+id/pay1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/pay1"
+    android:scaleType="centerCrop"
+    android:layout_centerVertical="true"
+    android:layout_marginStart="40dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pay2"
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true"
+        android:id="@+id/i"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40dp"/>
+</RelativeLayout>

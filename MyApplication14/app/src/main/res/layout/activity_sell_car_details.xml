@@ -1,0 +1,95 @@
+<!-- res/layout/activity_car_selection.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layoutAnimation="@anim/layout_animation"
+    android:layout_height="match_parent">
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/top_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:id="@+id/back_button"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Maruti Suzuki Ertiga"
+            android:id="@+id/header"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Tab Navigation -->
+    <LinearLayout
+        android:id="@+id/tab_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_below="@id/top_navigation_bar">
+        <TextView
+            android:id="@+id/tabmake"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="By Make"
+            android:textColor="@color/black"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tabyear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="YEAR"
+            android:textColor="@android:color/white"
+            android:background="@color/babyred" />
+
+        <TextView
+            android:id="@+id/tabfuel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="FUEL"
+            android:textColor="@color/black"
+            android:background="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Options List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_below="@id/tab_navigation"
+        android:layout_above="@id/btn_next" />
+
+    <!-- Bottom "Next" Button -->
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/babyred"
+        android:text="Confirm"
+        android:textColor="@android:color/white"
+        app:cornerRadius="5dp"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

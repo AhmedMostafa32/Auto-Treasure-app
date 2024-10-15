@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="back">Back</string>
+    <string name="help">Help</string>
+    <string name="book_test_drive">Book a test drive</string>
+        <string-array name="preference">
+                <item>Option</item>
+            <item>Modified</item>
+            <item>New</item>
+            <item>Old</item>
+        </string-array>
+
+        <string-array name="price">
+                <item>Price</item>
+            <item>Low To High</item>
+            <item>High To Low</item>
+        </string-array>
+
+        <string-array name="kms_options">
+                <item>Color</item>
+            <item>black</item>
+            <item>white</item>
+            <item>blue</item>
+            <item>red</item>
+            <item>green</item>
+            <item>yellow</item>
+            <item>grey</item>
+        </string-array>
+</resources>

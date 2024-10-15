@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutAnimation="@anim/layout_animation"
+    tools:context=".HomeActivity">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Location"
+                android:textSize="16sp"
+                android:drawableStart="@drawable/pin"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="25dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/love"
+                android:layout_toEndOf="@id/tvLocation"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="25dp"
+                android:id="@+id/love"/>
+
+            <ImageView
+                android:layout_marginBottom="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/face"
+                android:layout_toEndOf="@id/love"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/pic"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutAnimation="@anim/layout_animation"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="290dp"
+                android:text="What are you looking for?"
+                android:textStyle="bold"
+                android:layout_marginStart="18dp"
+                android:id="@+id/what"
+                android:layout_marginBottom="15dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/what"
+                android:id="@+id/card1"
+                android:layout_marginStart="10dp"
+                app:cardCornerRadius="20dp"
+                android:backgroundTint="#E44E1F">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Buy Car"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:id="@+id/buucar"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"/>
+
+                    <TextView
+                        android:id="@+id/wide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/buucar"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/wide"
+                        android:text="Wide Range of Verified Cars for you!"
+                        android:textColor="#FFFFFF"
+                        android:textSize="9dp"
+                        tools:ignore="TextSizeCheck"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wide"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/sellcar"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/what"
+                android:layout_toEndOf="@+id/card1"
+                android:layout_marginStart="10dp"
+                android:id="@+id/card2"
+                android:backgroundTint="#3978F3"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sell Car"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:id="@+id/sellcar"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"/>
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sellcar"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/wide"
+                        android:text="Made Easy and Simple from Home"
+                        android:textColor="#FFFFFF"
+                        android:textSize="9dp"
+                        tools:ignore="TextSizeCheck"/>
+
+                    <ImageView
+                        android:layout_width="146dp"
+                        android:layout_height="70dp"
+                        android:layout_below="@id/text"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="-17dp"
+                        android:src="@drawable/selllcar"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Us"
+                android:layout_below="@id/card1"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:layout_marginStart="18dp"
+                android:id="@+id/contect"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/recycler2"
+                android:layoutAnimation="@anim/layout_animation"
+                android:layout_below="@id/contect"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Need Help?"
+                android:layout_below="@id/recycler2"
+                android:layout_marginStart="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:id="@+id/ned"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card4"
+                android:layout_width="320dp"
+                android:layout_centerInParent="true"
+                android:layout_height="39dp"
+                android:backgroundTint="@color/babyred"
+                android:layout_below="@id/ned"
+                android:layout_margin="18dp"
+                app:cardCornerRadius="5dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Request a call back"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="60dp"
+                        android:textColor="@color/white"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/telephone"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/rightarrow"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"/>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card5"
+                android:layout_width="320dp"
+                android:layout_centerInParent="true"
+                android:layout_height="39dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTint="@color/grey"
+                android:layout_below="@id/card4"
+                android:src="@drawable/group">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ask us on Whatsapp"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="60dp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/whats"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/rightarrow"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"/>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card6"
+                android:layout_width="158dp"
+                android:layout_marginStart="37dp"
+                app:cardCornerRadius="5dp"
+                android:layout_height="39dp"
+                android:backgroundTint="@color/grey"
+                android:layout_below="@id/card5"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/group">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Facebook"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="60dp" />
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/facebook_icon"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/rightarrow"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"/>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card7"
+                android:layout_width="158dp"
+                android:layout_marginStart="5dp"
+                android:layout_height="39dp"
+                android:backgroundTint="@color/grey"
+                android:layout_below="@id/card5"
+                app:cardCornerRadius="5dp"
+                android:layout_toEndOf="@id/card6"
+                android:layout_marginTop="18dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mail us"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="60dp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/email"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/rightarrow"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"/>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
